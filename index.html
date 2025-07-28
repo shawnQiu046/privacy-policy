@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Privacy Policy Redirect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    window.onload = function() {
+      var userLang = navigator.language || navigator.userLanguage;
+      if (userLang && userLang.toLowerCase().startsWith("zh")) {
+        window.location.href = "zh_privacy.html";
+      } else {
+        window.location.href = "en_privacy.html";
+      }
+    };
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 20%;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <p>Redirecting to the appropriate Privacy Policy page...</p>
+  <p>If the page does not load, please choose: 
+    <a href="zh_privacy.html">中文</a> | 
+    <a href="en_privacy">English</a>
+  </p>
+</body>
+</html>
